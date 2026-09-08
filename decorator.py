@@ -3,12 +3,12 @@ class Employee:
         self.name = name
         self._salary = salary  # Notice the underscore (_) to indicate a "private" attribute
 
-    @property
+    @property #Allows us to access _salary as a normal attribute
     def salary(self):
         """Getter method - retrieves salary"""
         return self._salary
 
-    @salary.setter
+    @salary.setter # This lets us modify _salary, but only if it meets validation criteria (no negative values).
     def salary(self, value):
         """Setter method - ensures salary is not negative"""
         if value < 0:
