@@ -8,4 +8,5 @@ def get_age(student):
     return student["age"]
 
 sorted_student = sorted(students, key=get_age)
+
 print(sorted_student)
